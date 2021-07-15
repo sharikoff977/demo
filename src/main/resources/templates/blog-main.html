@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text = "${title}">Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div class = "container"></div>
+<p th:text="'Hello, ' + ${title} + '!'" />
+<div th:each="el : ${posts}">
+    <h3 th:text = "${el.title}"></h3>
+    <p th:text = "${el.annons}"></p>
+    <a th:href="'/blog/' + ${el.id}">Детальнее</a>
+</div>
+</body>
+</html>
